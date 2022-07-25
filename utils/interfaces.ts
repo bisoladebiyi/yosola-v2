@@ -14,17 +14,30 @@ export interface ILogo {
 
 export interface IHeading {
     text: string; 
-    variant?: "regular" | "large"; 
-    color?: "dark" | "light"
+    variant?: "small" | "regular" | "large"; 
+    color?: "dark" | "light";
+    align?: "left" | "center" | "right";
 }
 
 export interface IButton {
     text: string; 
     variant?: "fill" | "outline"; 
-    align?: "left" | "center" | "right"
+    align?: "left" | "center" | "right";
 }
 
 export interface ICertificates {
     img: StaticImageData;
-    text: string
+    text: string;
 }
+
+export interface ISkills {
+    name: string;
+    percentage: number;
+}
+
+export interface ISkillsProp {
+    skillsRef: (node?: Element | null | undefined) => void;
+    animate: boolean;
+}
+  
+export interface IProgressBar extends ISkills, Omit<ISkillsProp, "skillsRef"> {}
