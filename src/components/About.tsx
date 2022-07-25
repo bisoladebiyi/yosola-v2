@@ -7,7 +7,7 @@ import Button from "./elements/Button";
 const About = () => {
   return (
     <div className="pt-32">
-      <Heading text={"A little about myself"} />
+      <Heading text={"A little about myself"} align="center" />
       <div className="flex justify-between px-32 mt-10 items-end">
         <div className="w-medium">
           <Image src={yossee} alt="Yosola" />
