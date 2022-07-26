@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import { ICertificates } from '../../utils/interfaces'
+import { ICertificates } from '../utils/interfaces'
 import cousera from '../../public/images/Coursera Certificate.png'
 import clarats from '../../public/images/Clarats Certificate.png'
 import google from '../../public/images/Google Certificate.png'

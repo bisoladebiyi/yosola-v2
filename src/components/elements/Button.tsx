@@ -1,5 +1,5 @@
 import React from 'react'
-import { IButton } from '../../../utils/interfaces'
+import { IButton } from '../../utils/interfaces'
 
 const Button:React.FC<IButton> = ({ text, variant, align }) => {
   return (
