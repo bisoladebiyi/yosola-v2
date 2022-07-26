@@ -1,5 +1,5 @@
 import React from 'react'
-import { IHeading } from '../../../utils/interfaces'
+import { IHeading } from '../../utils/interfaces'
 
 const Heading:React.FC<IHeading> = ({ text, variant, color, align }) => {
   return (

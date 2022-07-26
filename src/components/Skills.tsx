@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { IProgressBar, ISkills, ISkillsProp } from "../../utils/interfaces";
+import { IProgressBar, ISkills, ISkillsProp } from "../utils/interfaces";
 
 const skills: ISkills[] = [
   {
