@@ -1,56 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { IProgressBar, ISkills, ISkillsProp } from "../utils/interfaces";
-
-const skills: ISkills[] = [
-  {
-    name: "Design thinking",
-    percentage: 90,
-  },
-  {
-    name: "UI Design",
-    percentage: 100,
-  },
-  {
-    name: "User research",
-    percentage: 70,
-  },
-  {
-    name: "Prototyping",
-    percentage: 100,
-  },
-  {
-    name: "Coding",
-    percentage: 20,
-  },
-  {
-    name: "Information architecture",
-    percentage: 100,
-  },
-  {
-    name: "Design strategy",
-    percentage: 50,
-  },
-  {
-    name: "Wireframing",
-    percentage: 100,
-  },
-  {
-    name: "Analytics",
-    percentage: 50,
-  },
-  {
-    name: "Web design",
-    percentage: 90,
-  },
-  {
-    name: "Mobile design",
-    percentage: 100,
-  },
-  {
-    name: "Graphic design",
-    percentage: 60,
-  },
-];
+import { skills } from "../utils/constants";
+import { IProgressBar, ISkillsProp } from "../utils/interfaces";
 
 
 const ProgressBar: React.FC<IProgressBar> = ({ name, percentage, animate }) => {
