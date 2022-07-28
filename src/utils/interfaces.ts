@@ -50,3 +50,7 @@ export interface IWorks {
     color: string;
     swap?: boolean;
 }
+
+export interface IChatBubble {
+    text: string;
+}

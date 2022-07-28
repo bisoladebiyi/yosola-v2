@@ -39,3 +39,14 @@ a {
   border-radius: 5px;
   height: 4px;
 }
+.chat-arrow {
+  width: 0;
+  height: 0;
+  border-right: 15px solid #7A81F3;
+  border-top: 15px solid transparent;
+  border-bottom: 1px solid #7A81F3; 
+}
+
+/* .screen {
+  transform: scale(0.523857);
+} */
