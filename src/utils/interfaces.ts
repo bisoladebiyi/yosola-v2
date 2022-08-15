@@ -1,11 +1,15 @@
 import { StaticImageData } from "next/image";
+import React from "react";
 
 export interface INavbar {
     activePage: string;
+    setShowMobileMenu: React.Dispatch<React.SetStateAction<boolean>>;
+    showMobileMenu: boolean; 
 }
 
 export interface ILayout extends INavbar { 
     children: JSX.Element;
+    activePage: string;
 }
 
 export interface ILogo {
@@ -28,6 +32,7 @@ export interface IButton {
 export interface ICertificates {
     img: StaticImageData;
     text: string;
+    link: string;
 }
 
 export interface ISkills {
@@ -53,4 +58,11 @@ export interface IWorks {
 
 export interface IChatBubble {
     text: string;
+}
+
+export interface IContact {
+    message: string;
+    setMessage: React.Dispatch<React.SetStateAction<string>>;
+    setShowPopUp: React.Dispatch<React.SetStateAction<boolean>>;
+    domRef: React.MutableRefObject<any>
 }
