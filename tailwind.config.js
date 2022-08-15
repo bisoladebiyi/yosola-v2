@@ -15,7 +15,8 @@ module.exports = {
         "light": "#D9D9D9"
       },
       width: {
-        "medium": "44%"
+        "medium": "44%",
+        "super": "120%"
       }
     },
   },

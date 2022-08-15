@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "./abstracts/mixins";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Urbanist, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+.headingStyle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  width: 40%;
+  background: #7a81f3;
+  border-radius: 5px;
+  height: 4px;
+}
+
+.hero {
+  &-desktop {
+    background: url(../../public/images/landingDesktop.png);
+    height: 570px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include respond("desktop") {
+      background-size: 120%;
+    }
+    @include respond("desktop-sm") {
+      background-size: 1500px;
+    }
+    .screen {
+      top: 17%;
+      left: 36%;
+      width: 28%;
+      height: 34%;
+      @include respond("desktop") {
+        width: 33%;
+        top: 12%;
+        left: 33.5%;
+        height: 37%;
+      }
+      @include respond("desktop-sm") {
+        width: 400px;
+        top: 12%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .chat-arrow {
+        width: 0;
+        height: 0;
+        border-right: 15px solid #7a81f3;
+        border-top: 15px solid transparent;
+        border-bottom: 1px solid #7a81f3;
+      }
+      .sendBtn {
+        width: 17px;
+      }
+    }
+  }
+  &-mobile {
+    background: url(../../public/images/landingMobile.png);
+    height: 100vh;
+    background-position: center;
+    background-size: 100% 130%;
+    background-repeat: no-repeat;
+    @include respond("mobile") {
+      height: 800px;
+      background-size: 100% 100%;
+    }
+    @include respond("mobile-sm") {
+      height: 750px;
+      background-size: 110% 110%;
+    }
+    .screen {
+      top: 33%;
+      left: 35%;
+      width: 50%;
+      height: 60%;
+      @include respond("mobile") {
+        top: 36%;
+        left: 35%;
+        width: 50%;
+        height: 48%;
+      }
+      @include respond("mobile-sm") {
+        top: 35%;
+        width: 53%;
+        left: 33%;
+        height: 52%;
+      }
+      .chat-arrow {
+        width: 0;
+        height: 0;
+        border-right: 15px solid #7a81f3;
+        border-top: 15px solid transparent;
+        border-bottom: 1px solid #7a81f3;
+      }
+      .input {
+        @include respond("mobile") {
+          input::placeholder {
+            font-size: 11px;
+          }
+          .sendBtn {
+            width: 13px;
+          }
+        }
+        .sendBtn {
+          width: 17px;
+        }
+      }
+    }
+  }
+}
+
+.popup {
+  position: fixed;
+  background: #ffffff;
+  box-shadow: 0 0 0 1000px rgba(33, 33, 33, 0.363);
+  z-index: 700;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

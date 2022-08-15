@@ -18,14 +18,14 @@ const Works = () => {
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
             }}
-            className={`rounded-xl text-white flex ${swap && "flex-row-reverse"} justify-between items-center pt-10 px-6 shadow-2xl ${i !== works.length - 1 ? "mb-24" : ""}`}
+            className={`rounded-xl text-white flex-col-reverse flex lg:flex-row ${swap && "flex-row-reverse"} justify-between items-center pt-10 px-3 sm:px-6 shadow-2xl ${i !== works.length - 1 ? "mb-14 sm:mb-24" : ""}`}
           >
-            <div className="w-1/3">
-              <p className="text-center font-medium text-2xl">{desc}</p>
+            <div className="pb-6 lg:pb-0 lg:w-1/3">
+              <p className="text-center font-medium text-xl sm:text-2xl">{desc}</p>
               <p
                 onMouseEnter={() => setIconAnimate(true)}
                 onMouseOut={() => setIconAnimate(false)}
-                className="text-center font-medium text-3xl mt-5 flex items-center space-x-2 justify-center cursor-pointer"
+                className="text-center font-medium text-2xl sm:text-3xl mt-2 lg:mt-5 flex items-center space-x-2 justify-center cursor-pointer"
                 style={{ color }}
               >
                 Read case study
@@ -43,7 +43,7 @@ const Works = () => {
               </p>
             </div>
             <div className="w-11/12">
-              <p className={`text-center text-6xl font-semibold ${i === works.length - 1 ? "" : "-mb-7"}`}>
+              <p className={`text-center text-4xl sm:text-5xl md:text-6xl font-semibold ${i === works.length - 1 ? "" : "md:-mb-7"}`}>
                 {title}
               </p>
               <div className="w-full">
