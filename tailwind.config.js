@@ -14,7 +14,8 @@ module.exports = {
         "darker": "#242424",
         "light": "#D9D9D9",
         "pink": "#D56788",
-        "brown": "#491309"
+        "brown": "#491309",
+        "deepPink": "#BB1A4A"
       },
       width: {
         "medium": "44%",
