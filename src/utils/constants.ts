@@ -13,6 +13,7 @@ export const works: IWorks[] = [
     title: "Markit",
     desc: "Responsive online market website and mobile application",
     color: "#0575E6",
+    link: "/works/omega-bakery"
   },
   {
     bg: novaBg,
@@ -21,6 +22,7 @@ export const works: IWorks[] = [
     desc: "Movie ticket book responsive website",
     color: "#FF4B2B",
     swap: true,
+    link: "/works/omega-bakery"
   },
   {
     bg: omegaBg,
@@ -28,6 +30,7 @@ export const works: IWorks[] = [
     title: "Omega Bakery",
     desc: "Payment and menu mobile application",
     color: "#FF0084",
+    link: "/works/omega-bakery"
   },
 ];
 
@@ -81,3 +84,22 @@ export const skills: ISkills[] = [
     percentage: 60,
   },
 ];
+
+export const painPointsOmega = [
+  {
+    title: "Long queue",
+    text: "Inability to be able to order pastries because of long queue at the front of the bakery store."
+  },
+  {
+    title: "Language Option",
+    text: "Need to be able to change the language option because not every user understands english"
+  },
+  {
+    title: "Track pastries",
+    text: "Want to be able to track pastry progress"
+  },
+  {
+    title: "Help option",
+    text: "Get lost in app due to navigation issues and no help option"
+  }
+]

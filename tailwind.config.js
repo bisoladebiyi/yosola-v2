@@ -12,7 +12,9 @@ module.exports = {
         "primary-dark": "#021B79",
         "dark": "#434343",
         "darker": "#242424",
-        "light": "#D9D9D9"
+        "light": "#D9D9D9",
+        "pink": "#D56788",
+        "brown": "#491309"
       },
       width: {
         "medium": "44%",
