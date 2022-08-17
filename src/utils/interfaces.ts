@@ -21,6 +21,8 @@ export interface IHeading {
     variant?: "small" | "regular" | "large"; 
     color?: "dark" | "light";
     align?: "left" | "center" | "right";
+    chelsea?: boolean;
+    nova?: boolean
 }
 
 export interface IButton {
@@ -66,5 +68,11 @@ export interface IContact {
     message: string;
     setMessage: React.Dispatch<React.SetStateAction<string>>;
     setShowPopUp: React.Dispatch<React.SetStateAction<boolean>>;
-    domRef: React.MutableRefObject<any>
+    domRef: React.MutableRefObject<any>;
+    setShowSuccess: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export interface ILink {
+    href: string;
+    children: JSX.Element; 
 }

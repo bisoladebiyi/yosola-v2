@@ -5,7 +5,7 @@ import novaBg from "../../public/images/novabg.png";
 import omegaBg from "../../public/images/omegabg.png";
 import omega from "../../public/images/omegabakery.png";
 import chelsea from "../../public/images/chelsea.png";
-import chelseabg from "../../public/images/chelseabg.png";
+import chelseabg from "../../public/images/chelseaBackground.png";
 import { ISkills, IWorks } from "./interfaces";
 
 export const works: IWorks[] = [
@@ -24,7 +24,7 @@ export const works: IWorks[] = [
     desc: "Movie ticket book responsive website",
     color: "#FF4B2B",
     swap: true,
-    link: "/works/omega-bakery",
+    link: "/works/nova-cinema",
   },
   {
     bg: chelseabg,
@@ -32,7 +32,7 @@ export const works: IWorks[] = [
     title: "Chelsea FC Redesign",
     desc: "Chelsea Fc App (The fifth stand app) Redesign",
     color: "#001489",
-    link: "/works/omega-bakery",
+    link: "/works/chelsea-redesign",
   },
   {
     bg: omegaBg,
@@ -132,4 +132,12 @@ export const accessibility: string[] = [
   "Including a change in the language option before moving to the homepage",
   "Including a change in the language option before moving to the homepage",
   "Including clear CTA buttons following the google material guidelines",
+];
+
+export const usabilityStudy: string[] = [
+  "Users wanted to see movie ratings before clicking",
+  "Users wanted a place where they can comment on the movie",
+  "Users wanted to set reminders for upcoming movies",
+  "Users voiced out that contact is not clearly seen",
+  "Users wanted a clear map direction",
 ];

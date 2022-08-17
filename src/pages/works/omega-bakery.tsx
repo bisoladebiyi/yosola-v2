@@ -18,6 +18,7 @@ import dWireframes from "../../../public/images/omega/digitalWireframes.jpg";
 import refine from "../../../public/images/omega/refineDesign.jpg";
 import screens from "../../../public/images/omega/omegaScreens.jpg";
 import avatar from "../../../public/images/omega/avatar.jpg"
+import mockups from "../../../public/images/omega/omegaMockups.jpg"
 import Layout from "../../components/Layout";
 import {
   accessibility,
@@ -126,12 +127,12 @@ const OmegaBakery = () => {
             <p className="text-pink uppercase font-black text-xl md:text-2xl mb-8">
               design process
             </p>
-            <div className="flex uppercase items-center space-x-6 font-black">
-              <div className="w-32 h-32 rounded-full bg-blue-200 text-blue-900 text-base md:text-xl grid place-items-center">
+            <div className="flex flex-wrap space-y-4 uppercase items-center space-x-3 md:space-x-6 font-black">
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-blue-200 text-blue-900 text-sm md:text-xl grid place-items-center">
                 brainstorm
               </div>
               <svg
-                className="w-16"
+                className="w-10 md:w-16"
                 viewBox="0 0 87 40"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -141,11 +142,11 @@ const OmegaBakery = () => {
                   fill="#979797"
                 />
               </svg>
-              <div className="w-32 h-32 rounded-full bg-amber-100 text-amber-600 text-base md:text-xl grid place-items-center">
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-amber-100 text-amber-600 text-sm md:text-xl grid place-items-center">
                 define
               </div>
               <svg
-                className="w-16"
+                className="w-10 md:w-16"
                 viewBox="0 0 87 40"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -157,12 +158,12 @@ const OmegaBakery = () => {
               </svg>
               <div
                 style={{ color: "#BB1A4A" }}
-                className="w-32 h-32 rounded-full bg-pink bg-opacity-40 grid text-base md:text-xl place-items-center"
+                className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-pink bg-opacity-40 grid text-sm md:text-xl place-items-center"
               >
                 ideate
               </div>
               <svg
-                className="w-16"
+                className="w-10 md:w-16"
                 viewBox="0 0 87 40"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -172,11 +173,11 @@ const OmegaBakery = () => {
                   fill="#979797"
                 />
               </svg>
-              <div className="w-32 h-32 rounded-full bg-orange-200 text-orange-800 bg-opacity-90 text-base md:text-xl grid place-items-center">
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-orange-200 text-orange-800 bg-opacity-90 text-sm md:text-xl grid place-items-center">
                 prototype
               </div>
               <svg
-                className="w-16"
+                className="w-10 md:w-16"
                 viewBox="0 0 87 40"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -186,7 +187,7 @@ const OmegaBakery = () => {
                   fill="#979797"
                 />
               </svg>
-              <div className="w-32 h-32 rounded-full bg-purple-200 text-purple-800 grid text-base md:text-xl place-items-center">
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-purple-200 text-purple-800 grid text-sm md:text-xl place-items-center">
                 test
               </div>
             </div>
@@ -370,6 +371,18 @@ const OmegaBakery = () => {
                   REDEFINING THE DESIGN
                 </p>
                 <Image src={refine} alt="REDEFINING THE DESIGN" />
+              </div>
+              <div className="mt-10">
+                <p className="uppercase font-black text-darker mb-5">
+                  MOCKUPS
+                </p>
+                <div className="grid place-items-center">
+                <figure className="w-11/12 sm:w-9/12">
+                <Image src={mockups} alt="MOCKUPS" />
+                </figure>
+                </div>
+               
+                
               </div>
             </div>
             <figure className="-mx-7 sm:-mx-24 lg:-mx-28">

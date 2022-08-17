@@ -4,7 +4,7 @@ import { IProgressBar, ISkillsProp } from "../utils/interfaces";
 
 
 const ProgressBar: React.FC<IProgressBar> = ({ name, percentage, animate }) => {
-  const [ componentPercentage, setComponentPercentage ] = useState(0)
+  const [ componentPercentage, setComponentPercentage ] = useState<number>(0)
   useEffect(() => {
       const timer = setInterval(() => {
         if (componentPercentage < percentage && animate) {
