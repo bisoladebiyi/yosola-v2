@@ -1,27 +1,41 @@
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 import { works } from "../utils/constants";
+import { IWorks } from "../utils/interfaces";
 import Heading from "./elements/Heading";
 
 const Works = () => {
-    const [ iconAnimate, setIconAnimate ] = useState<boolean>(false)
-  return (
-    <div id="works">
-      <Heading text="What I do" align="center" />
-      <div className="mt-10">
-        {works.map(({ bg, img, title, desc, color, swap }, i) => (
-          <div
-            key={i}
-            style={{
-              background: `url(${bg.src})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-            className={`rounded-xl text-white flex-col-reverse flex lg:flex-row ${swap && "flex-row-reverse"} justify-between items-center pt-10 px-3 sm:px-6 shadow-2xl ${i !== works.length - 1 ? "mb-14 sm:mb-24" : ""}`}
-          >
-            <div className="pb-6 lg:pb-0 lg:w-1/3">
-              <p className="text-center font-medium text-xl sm:text-2xl">{desc}</p>
+  const Work: React.FC<IWorks> = ({
+    bg,
+    img,
+    title,
+    desc,
+    color,
+    swap,
+    link,
+    i,
+  }) => {
+    const [iconAnimate, setIconAnimate] = useState<boolean>(false);
+    return (
+      <div
+        key={i}
+        style={{
+          background: `url(${bg.src})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+        className={`rounded-xl text-white flex-col-reverse flex lg:flex-row ${
+          swap && "flex-row-reverse"
+        } justify-between items-center pt-10 px-3 sm:px-6 shadow-2xl ${
+          i !== works.length - 1 ? "mb-14 sm:mb-24" : ""
+        }`}
+      >
+        <div className="pb-6 lg:pb-0 lg:w-1/3">
+          <p className="text-center font-medium text-xl sm:text-2xl">{desc}</p>
+          <Link href={link} passHref>
+            <a href={link}>
               <p
                 onMouseEnter={() => setIconAnimate(true)}
                 onMouseOut={() => setIconAnimate(false)}
@@ -30,7 +44,9 @@ const Works = () => {
               >
                 Read case study
                 <svg
-                  className={`w-10 ${iconAnimate ? "-translate-y-1 translate-x-1" : ""} transition-transform`}
+                  className={`w-10 ${
+                    iconAnimate ? "-translate-y-1 translate-x-1" : ""
+                  } transition-transform`}
                   viewBox="0 0 48 48"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -41,16 +57,40 @@ const Works = () => {
                   />
                 </svg>
               </p>
-            </div>
-            <div className="w-11/12">
-              <p className={`text-center text-4xl sm:text-5xl md:text-6xl font-semibold ${i === works.length - 1 ? "" : "md:-mb-7"}`}>
-                {title}
-              </p>
-              <div className="w-full">
-                <Image src={img} alt={title} />
-              </div>
-            </div>
+            </a>
+          </Link>
+        </div>
+        <div className="w-11/12">
+          <p
+            className={`text-center text-4xl sm:text-5xl md:text-6xl font-semibold ${
+              i === works.length - 1 ? "" : "md:-mb-7"
+            }`}
+          >
+            {title}
+          </p>
+          <div className="w-full">
+            <Image src={img} alt={title} />
           </div>
+        </div>
+      </div>
+    );
+  };
+  return (
+    <div id="works">
+      <Heading text="What I do" align="center" />
+      <div className="mt-10">
+        {works.map(({ bg, img, title, desc, color, swap, link }, i) => (
+          <Work
+            i={i}
+            bg={bg}
+            img={img}
+            title={title}
+            color={color}
+            desc={desc}
+            swap={swap}
+            link={link}
+            key={i}
+          />
         ))}
       </div>
     </div>

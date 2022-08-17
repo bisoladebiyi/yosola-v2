@@ -12,11 +12,19 @@ module.exports = {
         "primary-dark": "#021B79",
         "dark": "#434343",
         "darker": "#242424",
-        "light": "#D9D9D9"
+        "light": "#D9D9D9",
+        "pink": "#D56788",
+        "brown": "#491309",
+        "deepPink": "#BB1A4A",
+        "novaBlue": "#0A84FF"
       },
       width: {
         "medium": "44%",
         "super": "120%"
+      },
+      spacing: {
+        "super": "120%",
+        "semi-full": "5px"
       }
     },
   },

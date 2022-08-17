@@ -7,8 +7,9 @@ import useClickOut from "../hooks/useClickOut";
 
 const HeroSection = () => {
   const [date, setDate] = useState(new Date());
-  const [message, setMessage] = useState("")
-  const [showPopUp, setShowPopUp] = useState(false)
+  const [message, setMessage] = useState<string>("")
+  const [showPopUp, setShowPopUp] = useState<boolean>(false)
+  const [showSuccess, setShowSuccess] = useState<boolean>(false)
   const domRef = useClickOut(() => {
     setShowPopUp(false)
   })
@@ -21,6 +22,14 @@ const HeroSection = () => {
       clearInterval(timer);
     };
   }, []);
+
+  useEffect(() => {
+    if(showSuccess) {
+      setTimeout(() => {
+        setShowSuccess(false)
+    }, 3000)
+    }
+  }, [showSuccess]);
 
   const Screen = () => {
     return (
@@ -133,15 +142,16 @@ const HeroSection = () => {
   };
   return (
     <div className="-pt-32 sm:mt-0 sm:pt-20 hero">
+       <div className={`fixed top-20 sm:top-32 z-40 ${showSuccess ? "opacity-100" : "opacity-0"} transition-opacity bg-green-500 bg-opacity-90 p-4 text-white text-base rounded left-1/2 -translate-x-1/2 text-center`}>
+          Your message has been sent successfully.
+        </div>
       <div className={`relative w-full hidden sm:block hero-desktop`}>
-      {/* <Image src={imgDesktop} alt="hero image" /> */}
       <Screen />
     </div>
     <div className={`relative w-full sm:hidden hero-mobile`}>
-      {/* <Image src={imgDesktop} alt="hero image" /> */}
       <Screen />
     </div>
-    {showPopUp && <ContactPopup setShowPopUp={setShowPopUp} message={message} setMessage={setMessage} domRef={domRef} />}
+    {showPopUp && <ContactPopup setShowSuccess={setShowSuccess} setShowPopUp={setShowPopUp} message={message} setMessage={setMessage} domRef={domRef} />}
     </div>
   );
 };

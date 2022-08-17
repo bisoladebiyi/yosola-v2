@@ -2,7 +2,7 @@ import emailjs from "@emailjs/browser";
 import React, { useRef } from "react";
 import { IContact } from "../utils/interfaces";
 
-const ContactPopup: React.FC<IContact> = ({ message, setMessage, domRef, setShowPopUp }) => {
+const ContactPopup: React.FC<IContact> = ({ message, setMessage, domRef, setShowPopUp, setShowSuccess }) => {
   const form = useRef<any>();
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -14,6 +14,7 @@ const ContactPopup: React.FC<IContact> = ({ message, setMessage, domRef, setShow
     } finally {
         setMessage("")
         setShowPopUp(false)
+        setShowSuccess(true)
     }
   };
   return (

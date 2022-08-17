@@ -149,3 +149,32 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.banner{
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 100% 100% !important;
+}
+
+.protolink {
+  display: inline-block; 
+  max-width: 100%; 
+  vertical-align: middle;
+  overflow-wrap: break-word;
+}
+
+.novaHeading::before {
+content: "";
+position: absolute;
+width: 50px;
+height: 3px;
+background: #0A84FF;
+left: -50px;
+top: 50%;
+transform: translateY(-50%);
+border-radius: 3px;
+@include respond("mobile-sm") {
+  left: -25px;
+  width: 30px;
+}
+}

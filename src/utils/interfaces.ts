@@ -4,10 +4,10 @@ import React from "react";
 export interface INavbar {
     activePage: string;
     setShowMobileMenu: React.Dispatch<React.SetStateAction<boolean>>;
-    showMobileMenu: boolean; 
+    showMobileMenu?: boolean; 
 }
 
-export interface ILayout extends INavbar { 
+export interface ILayout extends Omit<INavbar, "setShowMobileMenu"> { 
     children: JSX.Element;
     activePage: string;
 }
@@ -21,6 +21,8 @@ export interface IHeading {
     variant?: "small" | "regular" | "large"; 
     color?: "dark" | "light";
     align?: "left" | "center" | "right";
+    chelsea?: boolean;
+    nova?: boolean
 }
 
 export interface IButton {
@@ -54,6 +56,8 @@ export interface IWorks {
     desc: string;
     color: string;
     swap?: boolean;
+    link: string;
+    i?: number
 }
 
 export interface IChatBubble {
@@ -64,5 +68,11 @@ export interface IContact {
     message: string;
     setMessage: React.Dispatch<React.SetStateAction<string>>;
     setShowPopUp: React.Dispatch<React.SetStateAction<boolean>>;
-    domRef: React.MutableRefObject<any>
+    domRef: React.MutableRefObject<any>;
+    setShowSuccess: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export interface ILink {
+    href: string;
+    children: JSX.Element; 
 }
