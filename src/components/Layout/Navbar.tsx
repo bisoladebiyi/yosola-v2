@@ -52,7 +52,7 @@ const Navbar: React.FC<INavbar> = ({
           </li>
           <div
             style={{ transition: "max-height .2s ease-in-out" }}
-            className={`capitalize w-72 overflow-hidden bg-white px-7 absolute rounded shadow top-semi-full left-1/2 -translate-x-1/2 ${
+            className={`capitalize w-72 overflow-hidden bg-white px-7 absolute rounded shadow top-2 left-1/2 -translate-x-1/2 ${
               showExtras ? "mt-5 mb-5 max-h-64 py-5" : "max-h-0"
             }`}
           >

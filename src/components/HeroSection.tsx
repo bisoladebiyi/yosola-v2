@@ -98,7 +98,6 @@ const HeroSection = () => {
             <input
               type="text"
               placeholder="Send message..."
-              autoFocus
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               className="w-full bg-white sm:bg-opacity-30 outline-none placeholder:sm:text-white placeholder:text-sm px-4 rounded-2xl py-1 text-sm"

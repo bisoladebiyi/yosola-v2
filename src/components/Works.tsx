@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 import React, { useState } from "react";
 import { works } from "../utils/constants";
 import { IWorks } from "../utils/interfaces";
 import Heading from "./elements/Heading";
+import LinkComponent from "./elements/Link";
 
 const Works = () => {
   const Work: React.FC<IWorks> = ({
@@ -18,24 +18,26 @@ const Works = () => {
   }) => {
     const [iconAnimate, setIconAnimate] = useState<boolean>(false);
     return (
-      <div
-        key={i}
-        style={{
-          background: `url(${bg.src})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-        className={`rounded-xl text-white flex-col-reverse flex lg:flex-row ${
-          swap && "flex-row-reverse"
-        } justify-between items-center pt-10 px-3 sm:px-6 shadow-2xl ${
-          i !== works.length - 1 ? "mb-14 sm:mb-24" : ""
-        }`}
-      >
-        <div className="pb-6 lg:pb-0 lg:w-1/3">
-          <p className="text-center font-medium text-xl sm:text-2xl">{desc}</p>
-          <Link href={link} passHref>
-            <a href={link}>
+      <LinkComponent href={link}>
+        <div
+          key={i}
+          style={{
+            background: `url(${bg.src})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }}
+          className={`rounded-xl text-white flex-col-reverse flex lg:flex-row ${
+            swap && "flex-row-reverse"
+          } justify-between items-center pt-10 px-3 sm:px-6 shadow-2xl ${
+            i !== works.length - 1 ? "mb-14 sm:mb-24" : ""
+          }`}
+        >
+          <div className="pb-6 lg:pb-0 lg:w-1/3">
+            <p className="text-center font-medium text-xl sm:text-2xl">
+              {desc}
+            </p>
+            <LinkComponent href={link}>
               <p
                 onMouseEnter={() => setIconAnimate(true)}
                 onMouseOut={() => setIconAnimate(false)}
@@ -57,22 +59,22 @@ const Works = () => {
                   />
                 </svg>
               </p>
-            </a>
-          </Link>
-        </div>
-        <div className="w-11/12">
-          <p
-            className={`text-center text-4xl sm:text-5xl md:text-6xl font-semibold ${
-              i === works.length - 1 ? "" : "md:-mb-7"
-            }`}
-          >
-            {title}
-          </p>
-          <div className="w-full">
-            <Image src={img} alt={title} />
+            </LinkComponent>
+          </div>
+          <div className="w-11/12">
+            <p
+              className={`text-center text-4xl sm:text-5xl md:text-6xl font-semibold ${
+                i === works.length - 1 ? "" : "md:-mb-7"
+              }`}
+            >
+              {title}
+            </p>
+            <div className="w-full">
+              <Image src={img} alt={title} />
+            </div>
           </div>
         </div>
-      </div>
+      </LinkComponent>
     );
   };
   return (

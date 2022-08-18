@@ -24,7 +24,7 @@ const About = () => {
           <p className="text-dark font-semibold text-base lg:text-xl mt-7">
             My name is Adetimilehin Adeyosola, yossee for short and I specialize
             in creating better experience for others through design.<br /><br />My journey
-            into UI/UX design began December 2020, taking the google UX
+            into UI/UX design began December 2021, taking the google UX
             specialization course at coursera where I learnt a lot about what it
             takes to be a UX designer.<br /><br />As a designer, I use my curiosity,
             emapthy and technical skills to find a way to humanize technology. I
