@@ -18,7 +18,7 @@ const ContactPopup: React.FC<IContact> = ({ message, setMessage, domRef, setShow
     }
   };
   return (
-    <div className="popup rounded-md p-10 w-2/5" ref={domRef}>
+    <div className="popup rounded-md p-10 w-11/12 sm:w-1/2 md:w-2/5" ref={domRef}>
       <form action="" onSubmit={sendEmail} ref={form}>
         <label htmlFor="" className="text-primary-dark text-xl font-semibold">
           E-mail address <span className="text-red-500">*</span>
