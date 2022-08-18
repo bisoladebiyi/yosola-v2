@@ -26,6 +26,7 @@ import fanChat2 from "../../../public/images/chelsea/fanChat2.jpg";
 import fixtures from "../../../public/images/chelsea/fixtures.jpg";
 import shop from "../../../public/images/chelsea/shopChels.png";
 import videos from "../../../public/images/chelsea/videosChels.png";
+import chelsealogo from "../../../public/images/chelsLogo.png";
 import Layout from "../../components/Layout";
 import Heading from "../../components/elements/Heading";
 
@@ -38,11 +39,14 @@ const OmegaBakery = () => {
           className="pt-24 flex flex-col items-center banner"
           style={{ background: `url(${bannerBg.src})` }}
         >
-          <p className="text-3xl text-primary-dark sm:text-4xl md:text-6xl font-bold sm:pt-10 -mb-4 sm:-mb-5 capitalize">
-            chelsea FC redesign
-          </p>
-          <figure className="w-11/12 sm:w-3/5 -ml-20">
-            <Image src={bannerImg} alt="Omega bakery" />
+          <div className="text-3xl sm:text-4xl md:text-6xl font-bold pt-5 sm:pt-10 capitalize text-white space-x-0 sm:space-x-4 flex items-center mb-1 sm:mb-0">
+            <figure className="w-12 sm:w-16 md:w-20 -mb-2">
+              <Image src={chelsealogo} alt="" />
+            </figure>
+            <p>chelsea FC redesign</p>
+          </div>
+          <figure className="w-11/12 sm:w-3/5 -ml-10 sm:-ml-20">
+            <Image src={bannerImg} alt="chelsea FC redesign" />
           </figure>
         </div>
         {/* project overview  */}
@@ -309,27 +313,35 @@ const OmegaBakery = () => {
             </div>
             <div className="mt-16">
               <p className="uppercase font-black text-primary-dark mb-5">
-              Shop
+                Shop
               </p>
               <div className="xl:flex items-center justify-center xl:flex-row-reverse">
                 <figure className="xl:w-4/5">
                   <Image src={shop} alt="" />
                 </figure>
                 <p className="xl:w-2/5 text-base">
-                For the videos section, I edited the feature and designed another feature called the ‘chelsea’ feature. I added a section for news articles, videos and Chelsea tv plus where subscribed user can watch exclusive content and livestream matches
+                  For the videos section, I edited the feature and designed
+                  another feature called the ‘chelsea’ feature. I added a
+                  section for news articles, videos and Chelsea tv plus where
+                  subscribed user can watch exclusive content and livestream
+                  matches
                 </p>
               </div>
             </div>
             <div className="mt-16">
               <p className="uppercase font-black text-primary-dark mb-5">
-              Videos
+                Videos
               </p>
               <div className="xl:flex items-center justify-center">
                 <figure className="xl:w-4/5">
                   <Image src={videos} alt="" />
                 </figure>
                 <p className="xl:w-1/3 text-base xl:-ml-32">
-                For the videos section, I edited the feature and designed another feature called the ‘chelsea’ feature. I added a section for news articles, videos and Chelsea tv plus where subscribed user can watch exclusive content and livestream matches
+                  For the videos section, I edited the feature and designed
+                  another feature called the ‘chelsea’ feature. I added a
+                  section for news articles, videos and Chelsea tv plus where
+                  subscribed user can watch exclusive content and livestream
+                  matches
                 </p>
               </div>
             </div>

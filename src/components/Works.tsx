@@ -39,10 +39,10 @@ const Works = () => {
             </p>
             <LinkComponent href={link}>
               <p
+              style={{ background: color}}
                 onMouseEnter={() => setIconAnimate(true)}
                 onMouseOut={() => setIconAnimate(false)}
-                className="text-center font-medium text-2xl sm:text-3xl mt-2 lg:mt-5 flex items-center space-x-2 justify-center cursor-pointer"
-                style={{ color }}
+                className="text-center text-white font-medium text-2xl p-2 rounded mt-2 lg:mt-5 flex items-center space-x-2 justify-center cursor-pointer"
               >
                 Read case study
                 <svg
@@ -55,7 +55,7 @@ const Works = () => {
                 >
                   <path
                     d="M36.0001 14.1C36.0001 13.5696 35.7894 13.0609 35.4143 12.6858C35.0393 12.3107 34.5306 12.1 34.0001 12.1L18.0001 12C17.4697 12 16.961 12.2107 16.5859 12.5858C16.2108 12.9609 16.0001 13.4696 16.0001 14C16.0001 14.5304 16.2108 15.0391 16.5859 15.4142C16.961 15.7893 17.4697 16 18.0001 16H29.1201L12.5801 32.58C12.3927 32.7659 12.2439 32.9871 12.1423 33.2308C12.0408 33.4746 11.9885 33.736 11.9885 34C11.9885 34.264 12.0408 34.5254 12.1423 34.7692C12.2439 35.0129 12.3927 35.2341 12.5801 35.42C12.766 35.6075 12.9872 35.7562 13.231 35.8578C13.4747 35.9593 13.7361 36.0116 14.0001 36.0116C14.2641 36.0116 14.5256 35.9593 14.7693 35.8578C15.013 35.7562 15.2342 35.6075 15.4201 35.42L32.0001 18.84V30C32.0001 30.5304 32.2108 31.0391 32.5859 31.4142C32.961 31.7893 33.4697 32 34.0001 32C34.5306 32 35.0393 31.7893 35.4143 31.4142C35.7894 31.0391 36.0001 30.5304 36.0001 30V14.1Z"
-                    fill={color}
+                    fill={"#fff"}
                   />
                 </svg>
               </p>
