@@ -241,7 +241,8 @@ const OmegaBakery = () => {
             </div>
           </div>
         </div>
-        <div className="mt-28 bg-red-500 flex flex-col text-lg sm:text-xl items-center px-7 sm:px-20 py-14 font-semibold text-center">
+      </div>
+      <div className="mt-28 bg-red-500 flex flex-col text-lg sm:text-xl items-center px-7 sm:px-20 py-14 font-semibold text-center">
           <figure className="w-32 sm:w-44 mb-5">
             <Image src={yossee} alt="" />
           </figure>
@@ -249,7 +250,6 @@ const OmegaBakery = () => {
           <p className="mt-7">Email: <a className="underline" href="mailto:adeyosola7@gmail.com">adeyosola7@gmail.com</a></p>
           <p>Phone: <a className="underline" href="tel:+2348145311247">+2348145311247</a></p>
         </div>
-      </div>
       </div>
     </Layout>
   );
