@@ -15,7 +15,7 @@ export const works: IWorks[] = [
     title: "Markit",
     desc: "Responsive online market website and mobile application",
     color: "#0575E6",
-    link: "/works/omega-bakery",
+    link: "/works/markit",
   },
   {
     bg: novaBg,
@@ -141,3 +141,18 @@ export const usabilityStudy: string[] = [
   "Users voiced out that contact is not clearly seen",
   "Users wanted a clear map direction",
 ];
+
+export const markitCaseStudies: string[] = [
+  "Project overview",
+  "Design process",
+  "Timeline",
+  "User research",
+  "Personas",
+  "Problem statements",
+  "Competitive analysis",
+  "User flow",
+  "Sitemap",
+  "Wireframes",
+  "Mockups",
+  "Usability test"
+]

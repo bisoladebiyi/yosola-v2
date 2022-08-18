@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import useClickOut from "../hooks/useClickOut";
 import { IScreen } from "../utils/interfaces";
 import ChatBubble from "./ChatBubble";
 import Input from "./elements/Input";

@@ -170,3 +170,15 @@ border-radius: 3px;
   width: 30px;
 }
 }
+
+.arrow {
+  animation-name: animate;
+  animation-duration: .9s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes animate {
+  from {top: -20px; opacity: .8;}
+  to {top: 10px; opacity: 1;}
+}

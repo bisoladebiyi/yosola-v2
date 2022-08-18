@@ -22,7 +22,11 @@ export interface IHeading {
     color?: "dark" | "light";
     align?: "left" | "center" | "right";
     chelsea?: boolean;
-    nova?: boolean
+    nova?: boolean;
+    markit?: boolean;
+    fill?: string;
+    num?: string;
+    sphere?: boolean
 }
 
 export interface IButton {

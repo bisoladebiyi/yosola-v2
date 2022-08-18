@@ -25,6 +25,9 @@ module.exports = {
       spacing: {
         "super": "120%",
         "semi-full": "5px"
+      },
+      screens: {
+        xs: "450px"
       }
     },
   },
