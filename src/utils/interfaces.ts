@@ -76,3 +76,16 @@ export interface ILink {
     href: string;
     children: JSX.Element; 
 }
+
+export interface IInput {
+    message: string; 
+    changeValue: (e:React.ChangeEvent<HTMLInputElement>) => void ;
+    showPopUp: boolean;
+}
+
+export interface IScreen {
+    setShowPopUp: React.Dispatch<React.SetStateAction<boolean>>; 
+    showPopUp: boolean; 
+    message: string; 
+    setMessage: React.Dispatch<React.SetStateAction<string>>
+}
