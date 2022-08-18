@@ -19,6 +19,7 @@ import refine from "../../../public/images/omega/refineDesign.jpg";
 import screens from "../../../public/images/omega/omegaScreens.jpg";
 import avatar from "../../../public/images/omega/avatar.jpg"
 import mockups from "../../../public/images/omega/omegaMockups.jpg"
+import omegalogo from "../../../public/images/omegaLogo.png";
 import Layout from "../../components/Layout";
 import {
   accessibility,
@@ -36,13 +37,15 @@ const OmegaBakery = () => {
           className="pt-24 flex flex-col items-center banner"
           style={{ background: `url(${bannerBg.src})` }}
         >
-          <p
-            style={{ color: "#FF0084" }}
-            className="text-3xl sm:text-4xl md:text-6xl font-bold pt-5 sm:pt-10 -mb-4 sm:-mb-8 md:-mb-14"
+          <div
+            className="text-3xl sm:text-4xl md:text-6xl font-bold pt-5 sm:pt-10 text-white space-x-0 sm:space-x-4 flex items-center mb-1 sm:mb-0"
           >
-            OMEGA BAKERY
-          </p>
-          <div className="w-4/5 sm:w-3/5 sm:-mb-14">
+            <figure className="w-12 sm:w-16 md:w-20 -mb-2">
+              <Image src={omegalogo} alt="" />
+            </figure>
+            <p>OMEGA BAKERY</p>
+          </div>
+          <div className="w-4/5 sm:w-3/5">
             <Image src={bannerImg} alt="Omega bakery" />
           </div>
         </div>

@@ -26,6 +26,7 @@ import bookTicket1 from "../../../public/images/nova/bookTickets.jpg";
 import bookTicket2 from "../../../public/images/nova/book ticket – 8 1.jpg";
 import payment from "../../../public/images/nova/pay – 8 1.jpg";
 import success from "../../../public/images/nova/success.jpg";
+import novalogo from "../../../public/images/novaLogo.png";
 import { usabilityStudy } from "../../utils/constants";
 
 const OmegaBakery = () => {
@@ -37,14 +38,17 @@ const OmegaBakery = () => {
           className="pt-24 flex flex-col items-center banner"
           style={{ background: `url(${bannerBg.src})` }}
         >
-          <p
-            style={{ color: "#FF4B2B" }}
-            className="text-3xl sm:text-4xl md:text-6xl font-bold sm:pt-10 capitalize"
+          <div
+            className="text-3xl sm:text-4xl md:text-6xl font-bold pt-5 sm:pt-10 text-white space-x-0 sm:space-x-4 flex items-center mb-1 sm:mb-0"
           >
-            Nova cinema
-          </p>
+            <figure className="w-12 sm:w-16 md:w-20 -mb-2">
+              <Image src={novalogo} alt="" />
+            </figure>
+            <p>Nova cinema</p>
+          </div>
+        
           <figure className="w-10/12 sm:w-3/5">
-            <Image src={bannerImg} alt="Omega bakery" />
+            <Image src={bannerImg} alt="Nova cinema" />
           </figure>
         </div>
         {/* main */}

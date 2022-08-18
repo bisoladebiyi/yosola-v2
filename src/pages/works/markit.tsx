@@ -33,6 +33,7 @@ import notes from "../../../public/images/markit/notes.jpg";
 import character from "../../../public/images/markit/character 12.png";
 import template1 from "../../../public/images/markit/template1.jpg";
 import template2 from "../../../public/images/markit/template2.jpg";
+import markitlogo from "../../../public/images/markitLogo.png";
 import Heading from "../../components/elements/Heading";
 import { markitCaseStudies } from "../../utils/constants";
 import LinkComponent from "../../components/elements/Link";
@@ -46,11 +47,14 @@ const Markit = () => {
           className="pt-24 flex flex-col items-center banner"
           style={{ background: `url(${bannerBg.src})` }}
         >
-          <p className="text-3xl sm:text-4xl text-primary-dark md:text-6xl font-bold sm:pt-10 capitalize">
-            Markit
-          </p>
-          <figure className="w-10/12 sm:w-3/5 -mt-10">
-            <Image src={bannerImg} alt="Omega bakery" />
+          <div className="text-3xl sm:text-4xl md:text-6xl font-bold pt-5 sm:pt-10 text-white space-x-0 sm:space-x-4 flex items-center mb-1 sm:mb-0">
+            <figure className="w-12 sm:w-16 md:w-20 -mb-2">
+              <Image src={markitlogo} alt="" />
+            </figure>
+            <p>Markit</p>
+          </div>
+          <figure className="w-10/12 sm:w-3/5 -mt-5 md:-mt-10">
+            <Image src={bannerImg} alt="Markit" />
           </figure>
         </div>
         {/* main */}
@@ -97,7 +101,9 @@ const Markit = () => {
               <div className="mt-10 sm:flex justify-between w-full">
                 <div className="space-y-5">
                   <div>
-                    <p className="text-purple-400 mb-3 text-xl sm:text-2xl font-semibold">Project</p>
+                    <p className="text-purple-400 mb-3 text-xl sm:text-2xl font-semibold">
+                      Project
+                    </p>
                     <p>
                       iOS mobile app <br />
                       Responsive webite
@@ -110,11 +116,15 @@ const Markit = () => {
                     <p>3 Weeks</p>
                   </div>
                   <div>
-                    <p className="text-purple-400 mb-3 text-xl sm:text-2xl font-semibold">My role</p>
+                    <p className="text-purple-400 mb-3 text-xl sm:text-2xl font-semibold">
+                      My role
+                    </p>
                     <p>UI/UX Designer</p>
                   </div>
                   <div>
-                    <p className="text-purple-400 mb-3 text-xl sm:text-2xl font-semibold">Tools</p>
+                    <p className="text-purple-400 mb-3 text-xl sm:text-2xl font-semibold">
+                      Tools
+                    </p>
                     <p>Figma</p>
                   </div>
                 </div>
@@ -139,7 +149,9 @@ const Markit = () => {
               </div>
             </div>
             <div className="mt-10">
-              <p className="text-purple-400 mb-3 text-xl sm:text-2xl font-semibold">The Problem:</p>
+              <p className="text-purple-400 mb-3 text-xl sm:text-2xl font-semibold">
+                The Problem:
+              </p>
               <p>
                 In the recent years, overcrowding has been a major issue
                 affecting nigeria. 90% of overcrowding happens in the
@@ -148,7 +160,9 @@ const Markit = () => {
               </p>
             </div>
             <div className="mt-10">
-              <p className="text-purple-400 mb-3 text-xl sm:text-2xl font-semibold">The Goal:</p>
+              <p className="text-purple-400 mb-3 text-xl sm:text-2xl font-semibold">
+                The Goal:
+              </p>
               <p>
                 Design an app that serves as an online market platform that help
                 people shop from their favourite stalls or supermarket locally.
@@ -440,7 +454,12 @@ const Markit = () => {
             </div>
           </div>
           <div className="mt-28" id="Usability test">
-            <Heading markit text="&nbsp;&nbsp;&nbsp;&nbsp;Test" fill="#0037FC" num="&nbsp;&nbsp;&nbsp;&nbsp;12" />
+            <Heading
+              markit
+              text="&nbsp;&nbsp;&nbsp;&nbsp;Test"
+              fill="#0037FC"
+              num="&nbsp;&nbsp;&nbsp;&nbsp;12"
+            />
             <div className="mt-6">
               <p className="text-center text-purple-500 font-semibold text-xl sm:text-2xl mb-5">
                 Usability study parameters
@@ -474,20 +493,24 @@ const Markit = () => {
               </p>
             </div>
             <div className="mt-16 sm:flex sm:space-x-10 items-center">
-                <figure className="sm:w-10/12">
-                    <Image src={notes} alt="" />
-                </figure>
-                <p className="text-amber-500 sm:w-1/3 text-center">My notes on usability study</p>
+              <figure className="sm:w-10/12">
+                <Image src={notes} alt="" />
+              </figure>
+              <p className="text-amber-500 sm:w-1/3 text-center">
+                My notes on usability study
+              </p>
             </div>
             <div className="mt-16 sm:flex sm:space-x-10 items-center sm:flex-row-reverse">
-                <figure className="sm🧑 w-10/12">
-                    <Image src={template1} alt="" />
-                </figure>
-                <p className="text-amber-500 sm:w-1/3 text-center">Used the theme I identified to form my insights</p>
+              <figure className="sm🧑 w-10/12">
+                <Image src={template1} alt="" />
+              </figure>
+              <p className="text-amber-500 sm:w-1/3 text-center">
+                Used the theme I identified to form my insights
+              </p>
             </div>
             <figure className="mt-16">
-                    <Image src={template2} alt="" />
-                </figure>
+              <Image src={template2} alt="" />
+            </figure>
           </div>
         </div>
         <footer className="mt-44 relative bg-red-500 flex flex-col text-lg sm:text-xl items-center px-7 sm:px-20 py-14 font-semibold text-center">
@@ -495,15 +518,29 @@ const Markit = () => {
             <Image src={character} alt="" />
           </figure>
           <p className="text-primary-dark text-3xl font-semibold mt-28 sm:mt-44">
-          Thank you!!!
+            Thank you!!!
           </p>
-          <p className="mt-6">If you like my work, appreciate it and feel free to share your feed back</p>
           <p className="mt-6">
-              <span className="text-primary-dark">Adetimilehin Adeyosola</span><br />
-              <span className="text-green-800">Product Designer</span>
+            If you like my work, appreciate it and feel free to share your feed
+            back
           </p>
-          <p className="mt-7">Email: <a className="underline" href="mailto:adeyosola7@gmail.com">adeyosola7@gmail.com</a></p>
-          <p>Phone: <a className="underline" href="tel:+2348145311247">+2348145311247</a></p>
+          <p className="mt-6">
+            <span className="text-primary-dark">Adetimilehin Adeyosola</span>
+            <br />
+            <span className="text-green-800">Product Designer</span>
+          </p>
+          <p className="mt-7">
+            Email:{" "}
+            <a className="underline" href="mailto:adeyosola7@gmail.com">
+              adeyosola7@gmail.com
+            </a>
+          </p>
+          <p>
+            Phone:{" "}
+            <a className="underline" href="tel:+2348145311247">
+              +2348145311247
+            </a>
+          </p>
         </footer>
       </div>
     </Layout>
